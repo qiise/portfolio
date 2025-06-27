@@ -3,9 +3,11 @@ import React from 'react';
 function ContactMe(){
 
     return(
-        <div>
-           <h1> Contact me here! </h1>
-           <h1> here is my resume</h1>
+        <div className = "min-h-screen bg-[#1C5D99] p-8 flex items-start justify-start">
+           <div className = "text-white font-jersey text-2xl text-left mt-2">
+                <p>email: hannah.qi@columbia.edu <br /> phone: +1 434-515-2618 <br /></p>
+           </div>
+           
         </div>
     )
 }
