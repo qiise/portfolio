@@ -7,6 +7,7 @@ const InstructionsPanel = () => {
       <ul className="list-disc pl-8 space-y-5 text-sm leading-relaxed">
         <li> Here, you can explore a collection of my past experiences, projects I have worked on, and more about me.</li>
         <li>Click on the folder icons to navigate around.</li>
+        <li>This webpage was built with React, Tailwind CSS, and Framer Motion</li>
         
       </ul>
     </div>

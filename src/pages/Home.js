@@ -15,7 +15,7 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-[#1C5D99] p-8 flex items-center justify-center">
-      <div className="flex flex-col lg:flex-row gap-16 w-full max-w-6xl mx-auto items-center lg:items-start justify-center">
+      <div className="flex flex-col lg:flex-row gap-16 w-full max-w-6xl mx-auto items-center lg:items-center justify-center">
         {/* Left Side - Folders and Book */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center ">
           {/* Folders Column */}

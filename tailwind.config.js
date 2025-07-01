@@ -15,10 +15,15 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-5%)' },  // smaller bounce, only 5% up
         },
+        'cloud': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-2%)' },  // smaller bounce, only 5% up
+        },
       },
       animation: {
         'bounce-slow': 'bounce-small 3s infinite',
-        'bounce-smaller': 'bounce-tiny 3s infinite'
+        'bounce-smaller': 'bounce-tiny 3s infinite',
+        'bounce-cloud': 'cloud 3s infinite',
       },
     },
   },

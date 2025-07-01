@@ -37,28 +37,85 @@ const LandingPage = () => {
       style={{ cursor: 'url(/src/assets/cursors/retro_cursor.png), auto' }}
     >
       
-      {/* Animated Pixel Clouds */}
-      {/*
-      {cloudImages.map((src, i) => {
-        const left = horizontalStep * (i + 1); // e.g., 14%, 28%, 42%, ...
-        const top = 40 + Math.random() * 200;
+      <img
+                src={cloud2}
+                alt="cloud"
+                className="absolute top-10 left-10 animate-bounce-cloud opacity-50"
+                style={{ top: '5%', right: '20%', width: '400px'}}
+            />
+            <img
+                src={cloud3}
+                alt="cloud"
+                className="absolute bottom-10 right-10 animate-bounce-cloud"
+                style={{ bottom: '1%', left: '55%', width: '800px'}}
+            />
+            <img
+                src={cloud4}
+                alt="cloud"
+                className="absolute bottom-50 right-50 animate-bounce-cloud"
+                style={{ width: '200px' }}
+            />
+            <img
+                src={cloud4}
+                alt="cloud"
+                className="absolute bottom-50 right-5 animate-bounce-cloud"
+                style={{ width: '200px' }}
+            />
+            <img
+                src={cloud5}
+                alt="cloud"
+                className="absolute top-12 left-2 animate-bounce-smaller"
+                style={{ width: '300px' }}
+            />
+            <img
+                src={cloud3}
+                alt="cloud"
+                className="absolute top-30 left-20 animate-bounce-smaller"
+                style={{ top: '35%', left: '15%', width: '550px'}}
+            />
+            <img
+                src={cloud2}
+                alt="cloud"
+                className="absolute top-30 left-20 animate-bounce-cloud opacity-75"
+                style={{ bottom: '10%', left: '11%', width: '300px',}}
+            />
+            <img
+                src={cloud2}
+                alt="cloud"
+                className="absolute top-30 left-20 animate-bounce-cloud opacity-45"
+                style={{ top: '10%', left: '65%', width: '500px', }}
+            />
+            <img
+                src={cloud4}
+                alt="cloud"
+                className="absolute top-10 left-20 animate-bounce-smaller"
+                style={{ bottom: '10%', left: '80%', width: '400px', }}
+            />
+            <img
+                src={cloud5}
+                alt="cloud"
+                className="absolute left-20 animate-bounce-smaller"
+                style={{ bottom: '1%', left: '20%', width: '500px', }}
+            />
+            <img
+                src={cloud4}
+                alt="cloud"
+                className="absolute animate-bounce-cloud"
+                style={{ bottom: '30%', left: '5%', width: '200px',  }}
+            />
+            <img
+                src={cloud5}
+                alt="cloud"
+                className="absolute animate-bounce-smaller"
+                style={{ top: '3%', left: '50%', width: '200px', }}
+            />
+            <img
+                src={cloud3}
+                alt="cloud"
+                className="absolute animate-bounce-slow opacity-80"
+                style={{ top: '10%', left: '35%', width: '350px',  }}
+            />
 
-        return (
-          <img
-            key={i}
-            src={src}
-            ref={(el) => (cloudRefs.current[i] = el)}
-            alt={`cloud-${i}`}
-            className="absolute animate-float pointer-events-none"
-            style={{
-              top: `${top}px`,
-              left: `${left}%`,
-              zIndex: 1,
-            }}
-          />
-        );
-      })}
-      */}
 
       {/* Welcome Speech Bubble */}
       <div className="absolute top-[30vh] left-[30vw] animate-bounce-slow z-50">
