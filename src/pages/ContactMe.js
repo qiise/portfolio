@@ -101,7 +101,7 @@ function ContactMe(){
             transition={{ duration: 0.4 }}
             className = "text-white font-jersey text-4xl text-left mt-2"
            >
-                <div className="bg-white bg-opacity-50 backdrop-blur-md rounded-xl p-6 shadow-lg ">
+                <div className="bg-white bg-opacity-30 backdrop-blur-md rounded-xl p-6 shadow-lg ">
                     <p><a href="mailto:hannah.qi@columbia.edu" className="flex items-center gap-2 hover:underline hover:text-blue-300 transition-all duration-200">
                         <FaEnvelope />email: hannah.qi@columbia.edu</a> 
                     <a href="https://www.linkedin.com/in/hannahqi/" target="_blank" rel="nooperner noreferrer" className="flex items-center gap-2 hover:underline hover:text-blue-300 transition-all duration-200"> 
