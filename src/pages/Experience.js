@@ -19,7 +19,7 @@ const experiences = [
     dates: 'May 2025 – July 2025',
     details: [
       'Worked on developing a computer vision model to help enhance care for pets',
-      'Utilied Hugging Face, PyTorch, and TensorFlow for the model and built full frontend and backend integration into the current web app using React and Next.js',
+      'Utilized Hugging Face, PyTorch, and TensorFlow for the model and built full frontend and backend integration into the current web app using React and Next.js',
       'Collaborated with nala team members through weekly stand-ups and sprints.'
     ],
   },
