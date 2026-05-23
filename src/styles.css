@@ -112,6 +112,7 @@ img {
 
 .primary-button,
 .ghost-button {
+  display: inline-flex;
   border: none;
   cursor: pointer;
   border-radius: 999px;
@@ -138,6 +139,7 @@ img {
 }
 
 .landing-stack {
+  display: block;
   position: relative;
   width: 100%;
   height: 100vh;
