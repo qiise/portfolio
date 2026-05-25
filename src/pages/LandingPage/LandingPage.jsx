@@ -16,7 +16,7 @@ function LandingPage() {
             <span>Qi</span>
           </h1>
         </Link>
-        <p className="landing-invitation">Click my name to explore</p>
+        <p className="landing-invitation">click on my name to explore</p>
       </div>
 
       <div className="landing-visual">
