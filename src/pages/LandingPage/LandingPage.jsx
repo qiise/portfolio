@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import landingBase from '../../../assets/Landing page base light.png';
 import lightCircle from '../../../assets/Light circle.png';
 import clouds2 from '../../../assets/Clouds 2 .png';
@@ -6,11 +7,40 @@ import lightClouds from '../../../assets/Light clouds.png';
 import './styles.css';
 
 function LandingPage() {
+  const [isExiting, setIsExiting] = useState(false);
+  const navigate = useNavigate();
+
+  function handleTitleClick(event) {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (!isExiting) {
+      setIsExiting(true);
+    }
+  }
+
+  function handleTransitionEnd(event) {
+    if (isExiting && event.animationName === 'landingFadeOut') {
+      navigate('/menu');
+    }
+  }
+
   return (
-    <main className="landing-page">
+    <main
+      className={`landing-page${isExiting ? ' is-exiting' : ''}`}
+      onAnimationEnd={handleTransitionEnd}
+    >
       <div className="landing-copy">
         <p className="landing-kicker">Portfolio</p>
-        <Link to="/menu" className="landing-title" aria-label="Enter Hannah Qi's portfolio">
+        <Link
+          to="/menu"
+          className="landing-title"
+          aria-label="Enter Hannah Qi's portfolio"
+          onClick={handleTitleClick}
+        >
           <h1>
             Hannah
             <span>Qi</span>
