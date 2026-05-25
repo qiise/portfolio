@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import landingBase from '../../assets/Landing page base light.png';
-import lightCircle from '../../assets/Light circle.png';
-import clouds2 from '../../assets/Clouds 2 .png';
-import lightClouds from '../../assets/Light clouds.png';
+import landingBase from '../../../assets/Landing page base light.png';
+import lightCircle from '../../../assets/Light circle.png';
+import clouds2 from '../../../assets/Clouds 2 .png';
+import lightClouds from '../../../assets/Light clouds.png';
+import './styles.css';
 
 function LandingPage() {
   return (

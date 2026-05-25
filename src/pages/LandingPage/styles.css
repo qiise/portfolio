@@ -1,0 +1,143 @@
+.landing-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.landing-copy {
+  position: absolute;
+  top: 46%;
+  left: clamp(2rem, 9vw, 10rem);
+  transform: translateY(-50%);
+  z-index: 5;
+  display: grid;
+  justify-items: start;
+  gap: 0.8rem;
+  color: #f8f4ea;
+}
+
+.landing-kicker {
+  margin: 0;
+  padding-left: 0.25rem;
+  font-size: clamp(0.72rem, 0.8vw, 0.86rem);
+  font-weight: 700;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(255, 245, 218, 0.86);
+}
+
+.landing-title {
+  display: block;
+  border-radius: 0.35rem;
+}
+
+.landing-title h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(5rem, 9.5vw, 10rem);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+  color: #5870B0;
+  text-shadow: 0 0.16rem 1.2rem rgba(40, 72, 131, 0.18);
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.landing-title h1 span {
+  display: block;
+  padding-left: clamp(2.25rem, 5vw, 5.75rem);
+  color: #ffe3a0;
+}
+
+.landing-title:hover h1,
+.landing-title:focus-visible h1 {
+  color: #41558d;
+  transform: translateY(-0.15rem);
+}
+
+.landing-title:hover h1 span,
+.landing-title:focus-visible h1 span {
+    color:#fcd579;
+}
+
+.landing-title:focus-visible {
+  outline: 2px solid rgba(255, 227, 160, 0.9);
+  outline-offset: 0.55rem;
+}
+
+.landing-invitation {
+  margin: 0.45rem 0 0 0.25rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 237, 197, 0.44);
+  color: rgba(255, 248, 232, 0.9);
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  letter-spacing: 0.08em;
+}
+
+.landing-visual {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.landing-stack {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.landing-stack .layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.landing-stack .circle {
+  z-index: 1;
+}
+
+.landing-stack .clouds-2 {
+  z-index: 2;
+}
+
+.landing-stack .light-clouds {
+  z-index: 3;
+}
+
+
+@media (max-width: 900px) {
+  .landing-page {
+    grid-template-columns: 1fr;
+    padding-top: 3rem;
+  }
+
+  .landing-stack {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 680px) {
+  .landing-copy {
+    top: auto;
+    bottom: clamp(2.5rem, 9vh, 5rem);
+    left: 1.8rem;
+    transform: none;
+  }
+
+  .landing-title h1 {
+    font-size: clamp(4.25rem, 22vw, 6rem);
+  }
+
+
+  .landing-page {
+    padding: 1.25rem 1rem 3rem;
+  }
+}
