@@ -7,25 +7,20 @@ import lightClouds from '../../assets/Light clouds.png';
 function LandingPage() {
   return (
     <main className="landing-page">
-      <div className="landing-copy">
-        <span className="eyebrow">Light mode portfolio</span>
-        <h1>Soft, clean, and polished for your next story.</h1>
-        <p>Start here to explore the portfolio sections and reach about, projects, experiences, and creative space.</p>
-        <div className="landing-actions">
-          <Link to="/menu" className="primary-button">
-            Enter portfolio
-          </Link>
+      <Link to="/menu" aria-label="Enter portfolio">
+        <div className="landing-copy">
+          <h1>Hannah Qi</h1>
         </div>
-      </div>
+      </Link>
 
       <div className="landing-visual">
-        <Link to="/menu" className="landing-stack" aria-label="Enter portfolio">
+        <div className="landing-stack" aria-hidden="true">
           <img src={landingBase} alt="Landing page background" className="layer base" />
           <img src={lightCircle} alt="Light circle" className="layer circle" />
           <img src={clouds2} alt="Cloud detail" className="layer clouds-2" />
           <img src={lightClouds} alt="Light cloud detail" className="layer light-clouds" />
-          <div className="landing-click-hint">Click the circle to continue</div>
-        </Link>
+          <div className="landing-click-hint">click on my name to enter my portfolio!</div>
+        </div>
       </div>
     </main>
   );
