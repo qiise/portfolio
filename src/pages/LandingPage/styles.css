@@ -79,7 +79,7 @@
   padding: 0.65rem 0.9rem 0.65rem 1.25rem;
   border: 1px solid rgba(255, 237, 197, 0.32);
   border-radius: 999px;
-  background: rgba(242, 246, 255, 0.2);
+  background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0.4rem 1.2rem rgba(39, 58, 112, 0.08);
   color: #5870B0;
   font-size: clamp(0.7rem, 1.1vw, 0.7rem);

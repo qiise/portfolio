@@ -14,7 +14,6 @@ function LandingPage() {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
       return;
     }
-
     event.preventDefault();
 
     if (!isExiting) {
