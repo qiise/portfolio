@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom';
 
 function PortfolioLayout({ title, children, isMenu = false }) {
   return (
-    <div className="portfolio-page">
+    <div className={`portfolio-page${isMenu ? ' menu-page' : ''}`}>
       <header className="portfolio-header">
         <div>
-          <p className="brand">Portfolio light mode</p>
+          <p className="brand">{isMenu ? 'Hannah Qi' : 'Hannah Qi'}</p>
           <h1>{title}</h1>
           <p>
             {isMenu
-              ? 'Navigate with the buttons below to view each section on its own page.'
-              : 'Each section is displayed independently so you can focus on the content you want.'}
+              ? 'where to next ?'
+              : ''}
           </p>
         </div>
         <nav className="portfolio-nav">
@@ -19,13 +19,17 @@ function PortfolioLayout({ title, children, isMenu = false }) {
               Back to menu
             </Link>
           )}
-          <Link className="ghost-button" to="/">
-            Back to landing
-          </Link>
+          {isMenu && (
+            <Link className="ghost-button" to="/">
+              Back to landing
+            </Link>
+          )}
+          
         </nav>
       </header>
 
       <main className="portfolio-main">{children}</main>
+      
     </div>
   );
 }
