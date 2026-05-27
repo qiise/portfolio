@@ -1,0 +1,27 @@
+.timeline-item span{
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.timeline-item {
+  background: var(--surface-soft);
+  border-radius: 24px;
+  padding: 1.4rem;
+  border: 1px solid rgba(126, 168, 255, 0.15);
+}
+
+.timeline-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.timeline-item strong {
+  min-width: 4rem;
+  color: var(--accent);
+}

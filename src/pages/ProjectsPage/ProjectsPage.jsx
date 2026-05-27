@@ -1,5 +1,6 @@
 import photoFrameLight from '../../../assets/Photo frame light.png';
-import PortfolioLayout from '../../../components/PortfolioLayout';
+import PortfolioLayout from '../../components/PortfolioLayout';
+import './styles.css';
 
 const projects = [
   {

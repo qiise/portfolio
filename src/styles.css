@@ -72,9 +72,7 @@ img {
   font-weight: 600;
 }
 
-.section-copy p,
-.timeline-item span,
-.project-card p {
+.section-copy p{
   color: var(--muted);
   line-height: 1.8;
 }
@@ -121,52 +119,14 @@ img {
   gap: 2rem;
 }
 
-.section-split .project-grid {
-  display: grid;
-  gap: 1.5rem;
-}
 
-.project-grid {
-  display: grid;
-  gap: 1.5rem;
-}
 
-.project-card,
-.creative-card,
-.timeline-item {
-  background: var(--surface-soft);
-  border-radius: 24px;
-  padding: 1.4rem;
-  border: 1px solid rgba(126, 168, 255, 0.15);
-}
-
-.project-card img,
-.creative-card img,
 .photo-frame-block img {
   border-radius: 24px;
   margin-bottom: 1rem;
 }
 
-.project-card h3,
-.creative-card h3 {
-  margin: 0 0 0.75rem;
-}
 
-.timeline-list {
-  display: grid;
-  gap: 1rem;
-}
-
-.timeline-item {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.timeline-item strong {
-  min-width: 4rem;
-  color: var(--accent);
-}
 
 .photo-frame-block {
   display: grid;
@@ -180,35 +140,6 @@ img {
   font-size: 0.95rem;
 }
 
-.creative-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.creative-hero {
-  display: grid;
-  gap: 1.5rem;
-  position: relative;
-}
-
-.creative-cloud {
-  position: absolute;
-  top: -1rem;
-  right: -1rem;
-  width: 220px;
-  opacity: 0.45;
-  pointer-events: none;
-}
-
-.creative-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.creative-card {
-  min-height: 220px;
-}
 
 .section-copy {
   display: grid;
