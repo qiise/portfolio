@@ -77,13 +77,16 @@
 }
 
 .menu-cloud {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-    z-index: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transform-origin: center;
+  pointer-events: none;
+  z-index: 0;
+  animation: cloudDriftBack 4s ease-in-out infinite alternate;
 }
 
 .menu-cloud-2 {
@@ -95,6 +98,18 @@
   transform: translate(24%, -18%);
   z-index: 0;
   pointer-events: none;
+  animation: cloudDriftCorner 3s ease-in-out infinite alternate;
+}
+
+.menu-cloud-3 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  transform: translate(-5%, -1%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.8;
+  animation: cloudDriftSide 3s ease-in-out infinite alternate;
 }
 
 .menu-page .portfolio-header {
@@ -249,5 +264,43 @@
 
   .menu-card {
     flex-basis: clamp(9rem, 42vw, 11rem);
+  }
+}
+
+@keyframes cloudDriftBack {
+  from {
+    transform: scale(1.02);
+  }
+
+  to {
+    transform: translate(0.55rem, -0.4rem) scale(1.02);
+  }
+}
+
+@keyframes cloudDriftCorner {
+  from {
+    transform: translate(24%, -18%);
+  }
+
+  to {
+    transform: translate(calc(24% + 0.45rem), calc(-18% + 0.18rem));
+  }
+}
+
+@keyframes cloudDriftSide {
+  from {
+    transform: translate(-5%, -1%);
+  }
+
+  to {
+    transform: translate(calc(-5% - 0.35rem), calc(-1% + 0.12rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-cloud,
+  .menu-cloud-2,
+  .menu-cloud-3 {
+    animation: none;
   }
 }

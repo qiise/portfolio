@@ -3,6 +3,7 @@ import PortfolioLayout from '../../components/PortfolioLayout';
 import './styles.css';
 import cloud from '../../../assets/Light cloud 3.png';
 import cloud2 from '../../../assets/Cloud 4 light.png';
+import cloud3 from '../../../assets/Cloud 5 light.png';
 
 const navItems = [
   { path: '/about', label: 'About me' },
@@ -15,6 +16,7 @@ function MenuPage() {
   return (
     <div className="page-styling">
       <img src={cloud2} alt="" className="menu-cloud-2" />
+      <img src={cloud3} alt="" className="menu-cloud-3" />
       <PortfolioLayout title="Choose a section to explore" isMenu>
         <div className="menu-grid">
           {navItems.map((item) => (
