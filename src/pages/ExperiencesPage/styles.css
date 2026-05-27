@@ -1,27 +1,163 @@
-.timeline-item span{
-  color: var(--muted);
-  line-height: 1.8;
+.experiences-page {
+  --page-blue: #5e77b5;
+  --page-ink: #4b5870;
+  --page-cloud: #dde8f8;
+  --page-gold: #eecd88;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 74%, rgba(167, 181, 255, 0.3), transparent 26rem),
+    linear-gradient(145deg, #f5f8fd, #dde8f8);
+  color: var(--page-ink);
 }
 
-.timeline-item {
-  background: var(--surface-soft);
-  border-radius: 24px;
-  padding: 1.4rem;
-  border: 1px solid rgba(126, 168, 255, 0.15);
+.experiences-page::before {
+  position: absolute;
+  top: 10rem;
+  right: -10rem;
+  width: 25rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(238, 205, 136, 0.5);
+  border-radius: 50%;
+  content: "";
 }
 
-.timeline-list {
+.experiences-page .portfolio-page {
+  position: relative;
+  z-index: 1;
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  padding: clamp(2rem, 5vh, 3.5rem) 1.5rem 4rem;
+}
+
+.experiences-page .portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2rem;
+  margin-bottom: clamp(2rem, 5vh, 3.25rem);
+}
+
+.experiences-page .brand {
+  display: inline-block;
+  margin: 0;
+  color: var(--page-blue);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+.experiences-page .portfolio-header h1 {
+  margin: 0.7rem 0 0;
+  color: var(--page-blue);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3.3rem, 7vw, 5.5rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  text-shadow: 0 0.3rem 1rem rgba(34, 54, 105, 0.14);
+}
+
+.experiences-page .portfolio-header > div > p:last-child:empty {
+  display: none;
+}
+
+.experiences-page .ghost-button {
+  display: inline-flex;
+  border: 1px solid rgba(238, 205, 136, 0.58);
+  border-radius: 999px;
+  background: rgba(252, 252, 250, 0.56);
+  box-shadow: 0 0.45rem 1.2rem rgba(39, 58, 112, 0.08);
+  color: var(--page-blue);
+  padding: 0.8rem 1.2rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.experiences-page .section-card {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(238, 205, 136, 0.52);
+  border-radius: 2rem;
+  background: rgba(252, 252, 250, 0.5);
+  box-shadow: 0 1.3rem 3.5rem rgba(75, 88, 112, 0.12);
+}
+
+.experiences-page .section-copy {
+  display: grid;
+  max-width: 45rem;
+  gap: 1rem;
+}
+
+.experiences-page .section-label {
+  justify-self: start;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(238, 205, 136, 0.2);
+  color: var(--page-blue);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+}
+
+.experiences-page .section-copy h2 {
+  margin: 0.55rem 0 0.2rem;
+  color: var(--page-blue);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.experiences-page .section-copy p {
+  margin: 0;
+  color: var(--page-ink);
+  line-height: 1.75;
+}
+
+.experiences-page .timeline-list {
   display: grid;
   gap: 1rem;
 }
 
-.timeline-item {
+.experiences-page .timeline-item {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: clamp(1.1rem, 3vw, 2rem);
+  padding: 1.15rem 1.35rem;
+  border: 1px solid rgba(126, 147, 201, 0.25);
+  border-radius: 999px;
+  background: rgba(221, 232, 248, 0.62);
+  box-shadow: inset 0 1px 0 rgba(252, 252, 250, 0.78);
 }
 
-.timeline-item strong {
-  min-width: 4rem;
-  color: var(--accent);
+.experiences-page .timeline-item strong {
+  min-width: 4.4rem;
+  color: var(--page-blue);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.experiences-page .timeline-item span {
+  color: var(--page-ink);
+  line-height: 1.55;
+}
+
+@media (max-width: 680px) {
+  .experiences-page .portfolio-header {
+    flex-direction: column;
+  }
+
+  .experiences-page .timeline-item {
+    align-items: start;
+    flex-direction: column;
+    border-radius: 1.4rem;
+  }
 }

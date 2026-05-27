@@ -1,30 +1,161 @@
-.project-card p {
-  color: var(--muted);
-  line-height: 1.8;
+.projects-page {
+  --page-blue: #5e77b5;
+  --page-ink: #4b5870;
+  --page-cloud: #dde8f8;
+  --page-cream: #fcfcfa;
+  --page-gold: #eecd88;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 84%, rgba(184, 201, 232, 0.8), transparent 30rem),
+    linear-gradient(155deg, #f5f8fd, #dde8f8);
+  color: var(--page-ink);
 }
 
-.section-split .project-grid {
+.projects-page::before {
+  position: absolute;
+  top: -15rem;
+  left: -12rem;
+  width: 33rem;
+  aspect-ratio: 1;
+  border: 2px solid rgba(167, 181, 255, 0.34);
+  border-radius: 50%;
+  content: "";
+}
+
+.projects-page .portfolio-page {
+  position: relative;
+  z-index: 1;
+  width: min(1140px, 100%);
+  margin: 0 auto;
+  padding: clamp(2rem, 5vh, 3.5rem) 1.5rem 4rem;
+}
+
+.projects-page .portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2rem;
+  margin-bottom: clamp(2rem, 5vh, 3.25rem);
+}
+
+.projects-page .brand {
+  display: inline-block;
+  margin: 0;
+  color: var(--page-blue);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+.projects-page .portfolio-header h1 {
+  margin: 0.7rem 0 0;
+  color: var(--page-blue);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3.3rem, 7vw, 5.5rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  text-shadow: 0 0.3rem 1rem rgba(34, 54, 105, 0.14);
+}
+
+.projects-page .portfolio-header > div > p:last-child:empty {
+  display: none;
+}
+
+.projects-page .ghost-button {
+  display: inline-flex;
+  border: 1px solid rgba(238, 205, 136, 0.58);
+  border-radius: 999px;
+  background: rgba(252, 252, 250, 0.56);
+  box-shadow: 0 0.45rem 1.2rem rgba(39, 58, 112, 0.08);
+  color: var(--page-blue);
+  padding: 0.8rem 1.2rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.projects-page .section-split {
   display: grid;
-  gap: 1.5rem;
+  gap: clamp(2rem, 5vw, 3.25rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(238, 205, 136, 0.52);
+  border-radius: 2rem;
+  background: rgba(252, 252, 250, 0.5);
+  box-shadow: 0 1.3rem 3.5rem rgba(75, 88, 112, 0.12);
 }
 
-.project-grid {
+.projects-page .section-copy {
   display: grid;
-  gap: 1.5rem;
+  max-width: 46rem;
+  gap: 1rem;
 }
 
-.project-card {
-  background: var(--surface-soft);
-  border-radius: 24px;
-  padding: 1.4rem;
-  border: 1px solid rgba(126, 168, 255, 0.15);
+.projects-page .section-label {
+  justify-self: start;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(238, 205, 136, 0.2);
+  color: var(--page-blue);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
 }
 
-.project-card img{
-  border-radius: 24px;
-  margin-bottom: 1rem;
+.projects-page .section-copy h2 {
+  margin: 0.55rem 0 0.2rem;
+  color: var(--page-blue);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.08;
 }
 
-.project-card h3{
-  margin: 0 0 0.75rem;
+.projects-page .section-copy p,
+.projects-page .project-card p {
+  margin: 0;
+  color: var(--page-ink);
+  line-height: 1.75;
+}
+
+.projects-page .project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 1.75rem);
+}
+
+.projects-page .project-card {
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid rgba(126, 147, 201, 0.28);
+  border-radius: 1.5rem;
+  background: rgba(221, 232, 248, 0.64);
+  box-shadow: inset 0 1px 0 rgba(252, 252, 250, 0.8);
+}
+
+.projects-page .project-card img {
+  margin-bottom: 1.25rem;
+  border-radius: 1.15rem;
+}
+
+.projects-page .project-card h3 {
+  margin: 0 0 0.7rem;
+  color: var(--page-blue);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.65rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .projects-page .portfolio-header {
+    flex-direction: column;
+  }
+
+  .projects-page .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
