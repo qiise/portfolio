@@ -1,6 +1,6 @@
-import photoFrameLight from '../../assets/Photo frame light.png';
-import lightCloud3 from '../../assets/Light cloud 3.png';
-import PortfolioLayout from '../components/PortfolioLayout';
+import photoFrameLight from '../../../assets/Photo frame light.png';
+import lightCloud3 from '../../../assets/Light cloud 3.png';
+import PortfolioLayout from '../../../components/PortfolioLayout';
 
 function CreativeSpacePage() {
   return (

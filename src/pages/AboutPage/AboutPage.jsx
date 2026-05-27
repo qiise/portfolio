@@ -1,5 +1,5 @@
-import photoFrameLight from '../../assets/Photo frame light.png';
-import PortfolioLayout from '../components/PortfolioLayout';
+import photoFrameLight from '../../../assets/Photo frame light.png';
+import PortfolioLayout from '../../../components/PortfolioLayout';
 
 function AboutPage() {
   return (

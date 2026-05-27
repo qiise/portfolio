@@ -1,4 +1,4 @@
-import PortfolioLayout from '../components/PortfolioLayout';
+import PortfolioLayout from '../../../components/PortfolioLayout';
 
 const experiences = [
   { period: '2025', label: 'Product design collaboration' },

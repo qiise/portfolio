@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import LandingPage from './pages/LandingPage/LandingPage';
 import MenuPage from './pages/MenuPage/MenuPage';
-import AboutPage from './pages/AboutPage';
-import ProjectsPage from './pages/ProjectsPage';
-import ExperiencesPage from './pages/ExperiencesPage';
-import CreativeSpacePage from './pages/CreativeSpacePage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
+import ExperiencesPage from './pages/ExperiencesPage/ExperiencesPage';
+import CreativeSpacePage from './pages/CreativeSpacePage/CreativeSpacePage';
 
 function App() {
   return (
