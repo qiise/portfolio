@@ -6,7 +6,7 @@ import './styles.css';
 function CreativeSpacePage() {
   return (
     <div className="creative-page">
-      <PortfolioLayout title="Creative space">
+      <PortfolioLayout title="">
         <section className="section creative-section">
           <div className="creative-hero">
             <img src={lightCloud3} alt="" className="creative-cloud" />

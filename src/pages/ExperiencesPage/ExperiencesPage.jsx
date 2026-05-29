@@ -10,7 +10,7 @@ const experiences = [
 function ExperiencesPage() {
   return (
     <div className="experiences-page">
-      <PortfolioLayout title="Experiences">
+      <PortfolioLayout title="">
         <section className="section section-card section-lighter">
           <div className="section-copy">
             <span className="section-label">Experiences</span>

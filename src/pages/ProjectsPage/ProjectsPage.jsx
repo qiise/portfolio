@@ -16,7 +16,7 @@ const projects = [
 function ProjectsPage() {
   return (
     <div className="projects-page">
-      <PortfolioLayout title="Projects">
+      <PortfolioLayout title="">
         <section className="section section-split">
           <div className="section-copy">
             <span className="section-label">Projects</span>
