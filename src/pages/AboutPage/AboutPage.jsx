@@ -1,11 +1,13 @@
 import photoFrameLight from '../../../assets/Photo frame light.png';
 import PortfolioLayout from '../../components/PortfolioLayout';
 import picture from '../../../assets/portfolio pfp.jpg';
+import cloud from '../../../assets/Light clouds.png';
 import './styles.css';
 
 function AboutPage() {
   return (
     <div className="about-page">
+      <img src={cloud} alt="" className="about-cloud" />
       <PortfolioLayout title="">
         <section className="section section-card">
           <span className="section-label">About me</span>
