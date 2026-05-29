@@ -7,11 +7,6 @@ function PortfolioLayout({ title, children, isMenu = false }) {
         <div>
           <p className="brand">{isMenu ? 'Hannah Qi' : 'Hannah Qi'}</p>
           <h1>{title}</h1>
-          <p>
-            {isMenu
-              ? 'where to next ?'
-              : ''}
-          </p>
         </div>
         <nav className="portfolio-nav">
           {!isMenu && (

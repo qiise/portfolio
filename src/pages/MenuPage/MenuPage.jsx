@@ -17,7 +17,7 @@ function MenuPage() {
     <div className="page-styling">
       <img src={cloud2} alt="" className="menu-cloud-2" />
       <img src={cloud3} alt="" className="menu-cloud-3" />
-      <PortfolioLayout title="Choose a section to explore" isMenu>
+      <PortfolioLayout title="Where to next ?" isMenu>
         <div className="menu-grid">
           {navItems.map((item) => (
             <Link key={item.path} to={item.path} className="menu-card">
