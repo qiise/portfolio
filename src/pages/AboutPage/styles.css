@@ -66,6 +66,10 @@
   text-shadow: 0 0.3rem 1rem rgba(34, 54, 105, 0.14);
 }
 
+.about-page .portfolio-header h1:empty {
+  display: none;
+}
+
 .about-page .portfolio-header > div > p:last-child:empty {
   display: none;
 }
@@ -92,6 +96,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(22rem, 0.95fr);
   grid-template-areas:
+    "label label"
     "intro visual"
     "copy copy";
   align-items: center;
@@ -110,12 +115,14 @@
 }
 
 .about-page .section-label {
+  grid-area: label;
+  justify-self: start;
   display: inline-flex;
-  padding: 0.55rem 0.85rem;
+  padding: 0.75rem 1.15rem;
   border-radius: 999px;
   background: rgba(238, 205, 136, 0.2);
   color: var(--page-blue);
-  font-size: 0.68rem;
+  font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 0.42em;
   text-transform: uppercase;
@@ -149,7 +156,7 @@
 .about-page .photo-frame-stack {
   grid-area: visual;
   position: relative;
-  width: min(160%, 50rem);
+  width: min(160%, 48rem);
   max-width: none;
   aspect-ratio: 1848 / 1080;
   justify-self: center;
@@ -187,6 +194,7 @@
   .about-page .section-card {
     grid-template-columns: 1fr;
     grid-template-areas:
+      "label"
       "intro"
       "visual"
       "copy";

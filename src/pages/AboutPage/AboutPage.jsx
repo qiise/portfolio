@@ -6,8 +6,10 @@ import './styles.css';
 function AboutPage() {
   return (
     <div className="about-page">
-      <PortfolioLayout title="about me">
+      <PortfolioLayout title="">
         <section className="section section-card">
+          <span className="section-label">About me</span>
+
           <div className="about-intro">
             <h1 className="summary">I enjoy combining software, AI, and design to turn complex problems into clean, useful experiences.</h1>
           </div>
