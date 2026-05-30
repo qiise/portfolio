@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PortfolioLayout from '../../components/PortfolioLayout';
 import './styles.css';
 import cloud from '../../../assets/Light cloud 3.png';
@@ -13,14 +15,42 @@ const navItems = [
 ];
 
 function MenuPage() {
+  const [exitPath, setExitPath] = useState('');
+  const navigate = useNavigate();
+
+  function handleMenuCardClick(event, path) {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+      return;
+    }
+    event.preventDefault();
+
+    if (!exitPath) {
+      setExitPath(path);
+    }
+  }
+
+  function handleAnimationEnd(event) {
+    if (exitPath && event.animationName === 'landingFadeOut') {
+      navigate(exitPath);
+    }
+  }
+
   return (
-    <div className="page-styling">
+    <div
+      className={`page-styling${exitPath ? ' is-exiting' : ''}`}
+      onAnimationEnd={handleAnimationEnd}
+    >
       <img src={cloud2} alt="" className="menu-cloud-2" />
       <img src={cloud3} alt="" className="menu-cloud-3" />
       <PortfolioLayout title="Where to next ?" isMenu>
         <div className="menu-grid">
           {navItems.map((item) => (
-            <Link key={item.path} to={item.path} className="menu-card">
+            <Link
+              key={item.path}
+              to={item.path}
+              className="menu-card"
+              onClick={(event) => handleMenuCardClick(event, item.path)}
+            >
               <span className="menu-card-label">{item.label}</span>
             </Link>
           ))}

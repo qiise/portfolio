@@ -202,7 +202,7 @@
 }
 
 .projects-page .project-tech-type {
-  color: rgba(75, 88, 112, 0.78);
+  color: rgba(107, 134, 184, 0.78);
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.24em;
@@ -219,9 +219,8 @@
 }
 
 .projects-page .project-tech-list li {
-  border: 1px solid rgba(238, 205, 136, 0.5);
   border-radius: 999px;
-  background: rgba(252, 252, 250, 0.44);
+  background: rgba(255, 255, 245, 0.44);
   color: var(--page-blue);
   padding: 0.42rem 0.62rem;
   font-size: 0.68rem;

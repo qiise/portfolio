@@ -5,6 +5,11 @@
   background: var(--bg);
 }
 
+.page-styling.is-exiting {
+  pointer-events: none;
+  animation: landingFadeOut 300ms ease-in-out forwards;
+}
+
 .portfolio-page {
   width: min(1120px, 100%);
   margin: 0 auto;
@@ -297,10 +302,20 @@
   }
 }
 
+@keyframes landingFadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .menu-cloud,
   .menu-cloud-2,
   .menu-cloud-3 {
     animation: none;
+  }
+
+  .page-styling.is-exiting {
+    animation: landingFadeOut 1ms linear forwards;
   }
 }
