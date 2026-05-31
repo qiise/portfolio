@@ -6,29 +6,39 @@ import './styles.css';
 function CreativeSpacePage() {
   return (
     <div className="creative-page">
+      <img src={lightCloud3} alt="" className="creative-cloud" />
       <PortfolioLayout title="">
         <section className="section creative-section">
-          <div className="creative-hero">
-            <img src={lightCloud3} alt="" className="creative-cloud" />
-            <div>
-              <span className="section-label">Creative space</span>
-              <h2>A calm place for ideas, experiments, and visuals.</h2>
+          <div className="creative-intro">
+            <span className="section-label">Creative space</span>
+            <p>This section showcases my personal creative art projects and design explorations.</p>
+          </div>
+
+          <article className="creative-card asset-showcase">
+            <div className="asset-copy">
+              <h3>Assets for this portfolio</h3>
               <p>
-                This section is meant for imaginative work, concept sketches, and quiet creative energy that
-                complements the main portfolio.
+                Placeholder description for the visual system behind this site: clouds, frames, palette studies,
+                interface sketches, and other supporting pieces that shape the portfolio's atmosphere.
               </p>
             </div>
-          </div>
-          <div className="creative-grid">
-            <article className="creative-card">
-              <img src={photoFrameLight} alt="Creative placeholder" />
-              <h3>Studio inspiration</h3>
-            </article>
-            <article className="creative-card">
-              <img src={photoFrameLight} alt="Creative placeholder" />
-              <h3>Light interface ideas</h3>
-            </article>
-          </div>
+            <div className="asset-gallery" aria-label="Portfolio asset placeholders">
+              <div className="asset-placeholder asset-placeholder-large">
+                <span>Feature asset</span>
+              </div>
+              <div className="asset-placeholder">
+                <span>Cloud study</span>
+              </div>
+              <div className="asset-placeholder">
+                <span>Frame study</span>
+              </div>
+            </div>
+          </article>
+
+          <aside className="creative-soon">
+            <span>More to be added soon</span>
+            <p>Future sketches, experiments, and visual explorations will live here.</p>
+          </aside>
         </section>
       </PortfolioLayout>
     </div>

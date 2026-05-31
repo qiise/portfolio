@@ -11,18 +11,39 @@ const experiences = [
       'Incoming summer 2026 intern.',
    },
   {
-    period: '2024',
-    role: 'Web Development Intern',
-    company: 'Company name',
+    period: 'September 2024 - Present',
+    role: 'Engineering Associate',
+    company: 'Columbia Daily Spectator Publishing Company',
     description:
-      'Built and refined web experiences, working across frontend implementation, visual polish, and user-facing interaction details.',
+      'placeholder',
   },
   {
-    period: '2023',
-    role: 'Creative Direction Support',
-    company: 'Company name',
+    period: 'January 2026 - April 2026',
+    role: 'Engineering Emerging Leader Series',
+    company: 'Goldman Sachs',
     description:
-      'Supported creative and digital presentation work through visual organization, content updates, and design-focused collaboration.',
+      ' placeholder',
+  },
+  {
+    period: 'January 2025 - December 2025',
+    role: 'Software Development Researcher',
+    company: 'CRIS Lab @ Columbia University',
+    description:
+      ' placeholder',
+  },
+  {
+    period: 'May 2025 - September 2025',
+    role: 'Software Development Intern',
+    company: 'Anote',
+    description:
+      ' placeholder',
+  },
+  {
+    period: 'May 2025 - September 2025',
+    role: 'AI/ML Engineering Intern',
+    company: 'Onawa Pet',
+    description:
+      ' placeholder',
   },
 ];
 
